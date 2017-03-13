@@ -1,0 +1,50 @@
+
+body{
+	/*height: 100%;*/
+	height: 1000px; /*设置一个固定的高度，用于布局*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	        /*
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	*/
+
+}
+header,footer{
+	width: 100%;
+	border: 1px solid black;
+	height: 100px;
+}
+
+section{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-flex: 1;  
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1; /*这里的flex是相对于外层容器body而言的*/
+}
+
+.left,.right{
+	width: 230px;
+	border: 1px solid black;
+	background-color: blue;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+	background-color: yellow ;
+}
