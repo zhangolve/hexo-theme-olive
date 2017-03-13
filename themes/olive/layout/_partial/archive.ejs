@@ -1,17 +1,43 @@
-<section>
-  <div class="left">
-    left
-  </div>
-  <div class="main">
-   <% page.posts.each(function(post){ %>
-    <div>
-    <a href="<%- url_for(post.path) %>" >
-    <%= post.title %>
-    </a>
-    </div>
-  <% }) %>
-  </div>
-  <div class="right">
-    right
-  </div>
-</section>
+ <section>
+        <div class="left">
+            <nav class="category-nav">
+                <ul class="sidebar-ul">
+                    <li class="nav-item sidebar">
+                        <a href="/front-end" class="link">
+        前端
+      </a>
+                    </li>
+                    <li class="nav-item sidebar">
+                        <a href="/university" class="link">
+        大学
+      </a>
+                    </li class="nav-item">
+                    <li class="nav-item sidebar">
+                        <a href="/university" class="link">
+        生活
+      </a>
+                    </li class="nav-item">
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="list-box  shadow ">
+                <ul>
+                    <li class="nav-item">
+                        <div>
+                            <a href="/eee">这个世界很精彩</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/eee">这个世界很精彩</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/eee">这个世界很精彩</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            right
+        </div>
+    </section>
