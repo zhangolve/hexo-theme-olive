@@ -24,12 +24,63 @@ section
     border-radius: 2px
     margin-bottom: 1.5rem
     overflow: hidden
+    padding-left:1rem
+    margin-left:1rem
+    padding-bottom:1.5rem
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.05)
     .slogan
        font-size: 1.2rem
        color: #333
        line-height: 1.6rem
        margin-bottom: 1.3rem
+    .link
+      font-size:1.5rem
+      line-height:1.6rem
+      .btn
+        height: 3rem
+        width: 10rem
+      
+        color:#fff
+        font-size:1.5rem
+        line-height:1.6rem
+        border-radius:5px
+        &:hover
+          opacity: 0.8
+      .btn-github
+          background-color: #4c4c4c
+      .btn-weixin
+          background-color:#44b549
+          &:hover
+           img
+             display:block
+          img
+            display:none  //使用z-index进行悬浮
+            position:absolute
+            top:10px
+            z-index:99
+            top: 120px;
+            right: 25%;
+            width:200px
+            height:200px
+      .btn-twitter
+          background-color:#1da1f2
+  .tag
+    background-color:#fff
+    .btn-group
+      padding:1rem 1rem 1rem 1rem;
+      .btn-tag
+        background-color: #f4f5f5
+        color: #454645;
+        border-radius: 20px
+        padding: .5rem 1.3rem
+        margin:.3rem
+        outline: none
+        -webkit-transition: background-color .3s,color .3s
+        transition: background-color .3s,color .3s
+        &:hover
+          background-color: #37c700
+          cursor: pointer;
+
 .main
   margin-top: 1.5rem
   width: 100%
@@ -81,6 +132,7 @@ li
 .box-right
   display:flex;
   flex-direction: column
+  padding-top:1rem
   .title    
     font-size: 1.3rem
     line-height: 2rem
@@ -97,6 +149,7 @@ li
   font-weight: 700
   font-size: 1.3rem
   border-radius: 2px
+  margin-right:2rem
   height:72px
     color:#909090
     text-decoration: none
@@ -110,7 +163,7 @@ li
   border-radius: 2px
   height:72px
   box-sizing:border-box
-  width:180px
+  width:140px
   &:active
     background-color: hsla(0,0%,87%,.2)
   &:hover
@@ -120,6 +173,15 @@ li
     text-decoration: none
     &:hover
       color: #4b82ff
-
-
+.page
+  .page-num
+    
+    width:8rem
+    line-height:2rem
+    font-size:1.3rem
+    border:1px solid black
+    margin:0px 3px 0px 3px
+    &:hover
+      border-bottom-color: #D26911
+      cursor:pointer
 
