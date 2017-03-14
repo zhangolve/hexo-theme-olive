@@ -13,52 +13,121 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #f00;
+  background-color: #f4f5f5;
 }
 header {
   width: 100%;
-  border: 1px solid #000;
   height: 100px;
+  background-color: #fff;
 }
-body {
-/*height: 100%;*/
-  height: 1000px; /*设置一个固定的高度，用于布局*/
+.nav {
+  float: left;
+}
+.nav-list {
+  float: left;
+  list-style: none;
+  color: #71777c;
+  padding: 0 1.5rem;
+  font-size: 1.33rem;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.nav-item .link {
+  display: -ms-flexbox;
   display: -webkit-box;
-  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #909090;
+}
+li {
+  list-style: none;
+}
+.list-box {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  float: left;
+  position: relative;
+  top: 6.66rem;
+  left: 30%;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.left {
+  margin-left: 100px;
+  border: 1px solid #000;
+  background-color: #f0f1f1;
+  width: 200px;
+}
+.right {
+  margin-right: 100px;
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 200px;
+}
+.main {
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+li {
+  list-style: none;
+}
+.list-box {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  float: left;
+  position: relative;
+  top: 6.66rem;
+  left: 30%;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+.shadow {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+.header-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.article-box {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-/*
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  */
 }
-section {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1; /*这里的flex是相对于外层容器body而言的*/
+.article-box:hover {
+  background-color: #909090;
 }
-.left,
-.right {
-  width: 230px;
-  border: 1px solid #000;
-  background-color: #00f;
+.article-box .title {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
-.main {
-  width: 100%;
-  height: 100%;
-  background-color: #ff0;
+a {
+  color: #333;
 }
 footer {
   width: 100%;
