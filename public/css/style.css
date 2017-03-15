@@ -71,7 +71,6 @@ section {
 }
 .right {
   margin-top: 1.5rem;
-  width: 20rem;
 }
 .right .social {
   background-color: #fff;
@@ -87,7 +86,9 @@ section {
   font-size: 1.2rem;
   color: #333;
   line-height: 1.6rem;
+  padding: 1rem;
   margin-bottom: 1.3rem;
+  border-bottom: 1px solid #f4f5f5;
 }
 .right .social .link {
   font-size: 1.5rem;
@@ -95,7 +96,7 @@ section {
 }
 .right .social .link .btn {
   height: 3rem;
-  width: 10rem;
+  width: 80%;
   color: #fff;
   font-size: 1.5rem;
   line-height: 1.6rem;
@@ -128,6 +129,7 @@ section {
 }
 .right .tag {
   background-color: #fff;
+  margin-left: 1rem;
 }
 .right .tag .btn-group {
   padding: 1rem 1rem 1rem 1rem;
@@ -145,6 +147,27 @@ section {
 .right .tag .btn-group .btn-tag:hover {
   background-color: #37c700;
   cursor: pointer;
+}
+.right .friends {
+  background-color: #fff;
+  margin: 2rem 0 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  color: #333;
+}
+.right .friends .friends-header {
+  border-bottom: 1px solid #f4f5f5;
+  font-size: 2rem;
+}
+.right .friends .friend {
+  display: block;
+  color: #909090;
+  font-size: 1.3rem;
+}
+.right .friends .friend a {
+  color: #909090;
+}
+.right .friends .friend:hover {
+  text-decoration: underline;
 }
 .main {
   margin-top: 1.5rem;
@@ -246,14 +269,21 @@ li {
 .nav-item a:hover {
   color: #4b82ff;
 }
-.page .page-num {
-  width: 8rem;
-  line-height: 2rem;
+.page {
+  text-align: center;
   font-size: 1.3rem;
-  border: 1px solid #000;
-  margin: 0px 3px 0px 3px;
 }
-.page .page-num:hover {
+.page a {
+  color: #2479cc;
+  text-decoration: none;
+}
+.page .prev {
+  float: left;
+}
+.page .next {
+  float: right;
+}
+.page:hover {
   border-bottom-color: #d26911;
   cursor: pointer;
 }

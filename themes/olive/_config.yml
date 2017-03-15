@@ -8,6 +8,7 @@ rss: /atom.xml
 excerpt_link: Read More
 fancybox: true
 
+
 # Sidebar
 sidebar: right
 widgets:
@@ -30,7 +31,7 @@ show_count: false
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
+twitter: 'zhangolve'
+github: 'zhangolve'
+weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
 fb_app_id:

@@ -6,10 +6,15 @@
 title: Hexo
 subtitle:
 description:
-author: John Doe
+author: Zhangolve
 language:
 timezone:
+#category
 
+category: 
+- 前端
+- 大学
+- 生活
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
