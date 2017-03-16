@@ -1,137 +1,48 @@
-(function($){
-  // Search
-  var $searchWrap = $('#search-form-wrap'),
-    isSearchAnim = false,
-    searchAnimDuration = 200;
-
-  var startSearchAnim = function(){
-    isSearchAnim = true;
-  };
-
-  var stopSearchAnim = function(callback){
-    setTimeout(function(){
-      isSearchAnim = false;
-      callback && callback();
-    }, searchAnimDuration);
-  };
-
-  $('#nav-search-btn').on('click', function(){
-    if (isSearchAnim) return;
-
-    startSearchAnim();
-    $searchWrap.addClass('on');
-    stopSearchAnim(function(){
-      $('.search-form-input').focus();
-    });
-  });
-
-  $('.search-form-input').on('blur', function(){
-    startSearchAnim();
-    $searchWrap.removeClass('on');
-    stopSearchAnim();
-  });
-
-  // Share
-  $('body').on('click', function(){
-    $('.article-share-box.on').removeClass('on');
-  }).on('click', '.article-share-link', function(e){
-    e.stopPropagation();
-
-    var $this = $(this),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      id = 'article-share-box-' + $this.attr('data-id'),
-      offset = $this.offset();
-
-    if ($('#' + id).length){
-      var box = $('#' + id);
-
-      if (box.hasClass('on')){
-        box.removeClass('on');
-        return;
-      }
+/* all pure javascript no jquery */
+var lastScrollTop = 0;
+if (document.addEventListener) {
+    document.addEventListener("scroll", scroll, false);
+} else {
+    document.onscroll = scroll();
+}
+function scroll() { // or window.addEventListener("scroll"....
+    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    var main = document.querySelector('.main-body');  //中间部分
+    var viewportOffset = main.getBoundingClientRect();
+    var top = viewportOffset.top;
+    if (st > lastScrollTop) {
+        if (top < 0) {
+            //隐藏顶栏
+            var header = document.querySelector('.main-header');
+            header.style.display = 'none';
+            // 显示返回顶部
+            var scrollBar=document.querySelector('.toTop-btn');
+            scrollBar.style.display='block';
+        }
     } else {
-      var html = [
-        '<div id="' + id + '" class="article-share-box">',
-          '<input class="article-share-input" value="' + url + '">',
-          '<div class="article-share-links">',
-            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-          '</div>',
-        '</div>'
-      ].join('');
+        if (top > 50) {
+            //显示顶栏
+            var header = document.querySelector('.main-header');
+            header.style.display = 'block';
+            //隐藏返回顶部
+            var scrollBar=document.querySelector('.toTop-btn');
+            scrollBar.style.display='none';
 
-      var box = $(html);
-
-      $('body').append(box);
+        }
+    }
+    lastScrollTop = st;
+}
+/* 直接写在javascript里面页面会闪一下 ，从白色过度到另一个颜色  */
+    window.onload=function(){
+    var article=document.getElementsByTagName('article');
+    if(!article.length)
+    {
+        document.body.style.backgroundColor="#f4f5f5";
+    }
     }
 
-    $('.article-share-box.on').hide();
-
-    box.css({
-      top: offset.top + 25,
-      left: offset.left
-    }).addClass('on');
-  }).on('click', '.article-share-box', function(e){
-    e.stopPropagation();
-  }).on('click', '.article-share-box-input', function(){
-    $(this).select();
-  }).on('click', '.article-share-box-link', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-
-    window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-  });
-
-  // Caption
-  $('.article-entry').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-
-      var alt = this.alt;
-
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-
-  if ($.fancybox){
-    $('.fancybox').fancybox();
-  }
-
-  // Mobile nav
-  var $container = $('#container'),
-    isMobileNavAnim = false,
-    mobileNavAnimDuration = 200;
-
-  var startMobileNavAnim = function(){
-    isMobileNavAnim = true;
-  };
-
-  var stopMobileNavAnim = function(){
-    setTimeout(function(){
-      isMobileNavAnim = false;
-    }, mobileNavAnimDuration);
-  }
-
-  $('#main-nav-toggle').on('click', function(){
-    if (isMobileNavAnim) return;
-
-    startMobileNavAnim();
-    $container.toggleClass('mobile-nav-on');
-    stopMobileNavAnim();
-  });
-
-  $('#wrap').on('click', function(){
-    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
-
-    $container.removeClass('mobile-nav-on');
-  });
-})(jQuery);
+    var toTopBtn=document.querySelector('.toTop-btn');
+    // btn
+    toTopBtn.onclick=function(){
+    window.scrollTo(0,0);
+    }

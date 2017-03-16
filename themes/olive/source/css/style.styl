@@ -1,7 +1,27 @@
+@import "_variables"
+/*
+@font-face
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
+  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
+       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
+       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
+       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
+*/
 html
   margin:0px
   padding:0px
   font-size:12px
+
+
+::-webkit-scrollbar  
+    display: none
+
+::-moz-scrollbars
+  display: none
+
   /*
   have not correct width of set layout
  
@@ -10,7 +30,7 @@ html
   word-break: break-word
   */
 body
- 
+
   display: -webkit-box
   display: -webkit-flex
   display: -ms-flexbox
@@ -24,7 +44,9 @@ body
   -webkit-justify-content: space-between
   -ms-flex-pack: justify
   justify-content: space-between
-  background-color: #f4f5f5
+  background-color: #fff
+
+
 a
   text-decoration: none
   color:#333
@@ -32,4 +54,6 @@ a
 @import "_partial/header"
 @import "_partial/archive"
 @import "_partial/footer"
-
+@import "_partial/article"
+@import "_partial/highlight"
+@import "_partial/comment"

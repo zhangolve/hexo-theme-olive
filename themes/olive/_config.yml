@@ -20,9 +20,14 @@ widgets:
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
-# - category
-# - tagcloud
-# - archive
+friends:
+- 百度火狐吧: http://tieba.baidu.com/f?kw=firefox
+- 破袜子: http://pewae.com/
+- 方室网志: http://fangshi.org/
+- 张鑫旭-鑫空间: http://www.zhangxinxu.com/wordpress/
+- Joyful Physics博客: http://www.cnblogs.com/joyfulphysics
+
+
 
 # widget behavior
 archive_type: 'monthly'

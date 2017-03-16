@@ -1,4 +1,4 @@
- <section>
+ <section class="main-body">
         <div class="left">
            
                 <ul class="sidebar-ul">
@@ -76,11 +76,19 @@
               </button>
               </div>
           </div>
+
           <div class="tag">
             <div class="btn-group">
+            <% site.tags.each(function(tag,i){ %>
+            <% if(i<10) { %>
+            <% var tagUrl='/tags/'+tag.name  %>    
+            <a href=<%= tagUrl %>  >    
             <button class="btn-tag">
-            333
+            <%= tag.name %>
             </button>
+            </a>
+            <% } %>
+            <% }) %>
             </div>
           </div>
           <div class="friends" >
@@ -88,32 +96,18 @@
           <i class="fa fa-users" aria-hidden="true"></i>那些小伙伴们
           </div>
     <ul>
+
+    <% theme.friends.forEach(function(friend){  %>
     <li class="friend">
-    <a href="/333">
-    <i class="fa fa-user" aria-hidden="true"></i>十年踪迹的博客
-    月影大神
+    <% var friendName=Object.keys(friend)[0]  %>
+    <% var friendUrl=friend[friendName] %>
+    <a href= <%= friendUrl %> target="_blank" >
+    <i class="fa fa-user" aria-hidden="true"></i>
+    <%=  friendName %>
     </a>
     </li>
-    <li class="friend">
-    <a href="/333">
-    <i class="fa fa-user" aria-hidden="true"></i>webzhao（文博老师）
-    </a>
-    </li>
-    <li class="friend">
-    <i class="fa fa-user" aria-hidden="true"></i>墨尘（年轻有想法的小伙）
-    </li>   
-    <li class="friend"> 
-    <i class="fa fa-user" aria-hidden="true"></i>阿肆（肆爷、H5Shuo 创始人）
-    </li>
-    <li class="friend">
-    <i class="fa fa-user" aria-hidden="true"></i>耗子么（有想法的小老鼠）
-   </li>
-   <li class="friend">
-   <i class="fa fa-user" aria-hidden="true"></i> xinz 的博客（饺大王）
-    </li>
-    <li class="friend">
-    <i class="fa fa-user" aria-hidden="true"></i>在线制作有声幻灯片（美女瓜神最新力作）
-         </li>
+    <% })  %>
+   
            </ul>
           </div>
 

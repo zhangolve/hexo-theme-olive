@@ -1,9 +1,42 @@
-#comments
-  background: #fff
-  box-shadow: 1px 2px 3px #ddd
-  padding: article-padding
-  border: 1px solid color-border
-  border-radius: 3px
-  margin: block-margin 0
-  a
-    color: color-link
+.ds-thread
+	
+	.ds-meta
+		display:none
+.ds-comments-tabs
+	.ds-tab
+		display: none
+#ds-thread #ds-reset .ds-comments-info {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 8px 0;
+    line-height: 25px;
+    position: relative;
+    display: none;
+}
+.ds-comments {
+  
+    -webkit-box-ordinal-group: 3;
+  
+        -ms-flex-order: 2;
+  
+            order: 2;
+}
+#ds-thread #ds-reset .ds-replybox {
+   
+    -webkit-box-ordinal-group: 2;
+   
+        -ms-flex-order: 1;
+   
+            order: 1;
+   
+}
+#ds-reset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
