@@ -18,12 +18,15 @@ function scroll() { // or window.addEventListener("scroll"....
             // 显示返回顶部
             var scrollBar=document.querySelector('.toTop-btn');
             scrollBar.style.display='block';
+            var share=document.querySelector('.share-content');
+            share.style.display='block';
         }
     } else {
+        var header = document.querySelector('.main-header');
+            header.style.display = 'block';
         if (top > 50) {
             //显示顶栏
-            var header = document.querySelector('.main-header');
-            header.style.display = 'block';
+            
             //隐藏返回顶部
             var scrollBar=document.querySelector('.toTop-btn');
             scrollBar.style.display='none';
@@ -46,3 +49,45 @@ function scroll() { // or window.addEventListener("scroll"....
     toTopBtn.onclick=function(){
     window.scrollTo(0,0);
     }
+    var title=document.title;
+    window.onblur=function(){
+       
+       document.title="See You Again ●'◡'●";  //离开本页面
+    }
+    window.onfocus=function(){
+       document.title=title;    //切换回本页面
+    }
+    /* 
+    可以产生二维码了
+   
+    http://service.weibo.com/share/share.php?url=
+
+    这个时候可以使用事件冒泡
+
+
+
+    */
+    var weiboUrl='http://service.weibo.com/share/share.php?url='+document.location.href+'&title='+document.title;
+    var twitterUrl='http://twitter.com/home/?status='+'我发现了这篇好文章  '+document.title+','+'  分享给你'+'http://hktkdy.com/quiz-about-focus';
+    var shareAll=document.querySelector('.share-content');
+    var qrcode=document.getElementById("qrcode");
+    shareAll.onclick=function(e){
+        
+        switch(e.target.id)
+        {
+            case 'toweixin' : new QRCode(qrcode, {
+    text: document.location.href,
+    width: 128,
+    height: 128,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+} );
+            qrcode.style.display='block';
+            
+            break;
+            case 'toweibo' :window.open(weiboUrl);break;
+            case 'totwitter' :window.open(twitterUrl);break;
+        }
+    } 
+   

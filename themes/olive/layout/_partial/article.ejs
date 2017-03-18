@@ -1,7 +1,10 @@
-<article class="article main-body" itemscope itemprop="blogPost">
+<article>
+  <%- partial('share') %>
+<div class="article main-body" itemscope itemprop="blogPost">
+
   <div class="article-meta">
     <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    <%- partial('post/category') %>
+  
   </div>
   <div class="article-inner">
     <%- partial('post/gallery') %>
@@ -19,18 +22,35 @@
           </p>
         <% } %>
       <% } else { %>
-       
         <%- post.content %>
       <% } %>
     </div>
     
+    <%- partial('post/category') %>
+ 
   </div>
-<div class="ds-thread" data-thread-key= "<%= post.key %>" data-title= "<%=post.title%>" data-url="<%=post.url%>">
+  <% var Fullkey= post.path %>
+  <% var keyArr=Fullkey.split('/') %>
+  <% var key=keyArr[keyArr.length-3]+'/'+keyArr[keyArr.length-2] %>
 
+<div class="ds-thread" data-thread-key= "<%= key %>" data-title= "<%=post.title%>" data-url="<%=post.permalink  %>">
+<script>
+var duoshuoQuery = {short_name:'<%= theme.duoshuo %>'};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
 </div>
-
+ 
   <!--上一篇下一篇 -->
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
+
+</div>
 </article>

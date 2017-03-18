@@ -1,12 +1,16 @@
-article
+article{
+  display:flex;
+  flex-direction:row;
+
+}
+
+.article
   width:70%
   margin-top:5rem
-  margin-left:15%
-  margin-right:15%
   background-color: #fff
 
 
-article
+.article
   h1
     font-weight: 700
     font-size: 2.7rem
@@ -19,6 +23,7 @@ article
     position:relative
     left:50%
     transform: translateX(-50%);
+    max-width: 100%;
   p 
     display: block
     -webkit-margin-before: 1em
@@ -59,4 +64,29 @@ article
   #article-nav-newer
     float:left
   #article-nav-older
-    float:right  
+    float:right 
+  .article-category
+    width:6rem
+    line-height:2rem
+    background: rgba(0,0,0,.06)
+    color: #666768
+    border-radius: 15px
+    text-align: center
+    font-size:14px
+  .show-tags
+    width:100%
+    background: rgba(0,0,0,.7)
+    ul
+      list-style:none
+    li 
+      float:left
+      width:10rem
+      line-height:2rem
+      background: rgba(0,0,0,.06)
+      color: #666768
+      border-radius: 15px
+      text-align: center
+      font-size:14px
+      margin-left:3px
+  .article-date
+    font-size:16px

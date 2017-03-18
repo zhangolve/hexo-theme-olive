@@ -111,7 +111,6 @@ section
   background-color: #fff
   border-radius: 2px
   margin-bottom: 1.5rem
-  text-align: center
   background-color: #fff
   border-radius: 2px
   width:100%
@@ -135,10 +134,10 @@ section
   
   
 .box-image
-  background-image: url(https://dn-mhke0kuv.qbox.me/2f5909e41505fde640dc.jpg?imageView2/1/w/120/h/120/q/85/format/jpg/interlace/1)
-  background-size: cover
-  background-position: 50%;
-  background-repeat: no-repeat;
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAACgBAMAAACPjaivAAAAElBMVEXi6O3////R3ujj6e/c5u3X4usQB3wbAAABCElEQVR42u3Vy03FQBBE0U6BDBCfPSEQAvlHw44FmvaoEbJLz+dGcORWeUqSJEmSJEmS/trTphoGCAi4CRAQcNMtgfUrQMDjbjgSQMBJgIDTjgyAj3JiQMBJtwTG/2bigfEnBgScdEtg/G8mHhh/YkDASYCAgJsAAQE3AQICbgIEBNwECPgvwJef3mrY2cCvGnY28KOGnQx8rcs7Btb1LYE5E2mAORNpgEEXXgNzJtIAgz7gGpgzkQaYM5EGmPKKtMCciRwBPyuiFvheGS2BQRdeA3Mm0gOfK6QlMGciDTBnIg0w6MJrYM5EGmDQB1wDcybSAHMm0gBTXpEWmDMRSZIkSZIk6cK+AUdTxLnCoi0gAAAAAElFTkSuQmCC")
+  background-size:cover
+  background-position: 50%
+  background-repeat: no-repeat
   -webkit-box-flex: 0
   -ms-flex: 0 0 auto
   flex: 0 0 auto
@@ -193,17 +192,15 @@ section
   text-align:center
   font-size:1.3rem
   padding-bottom:3rem
-  position:absolute
-  top:900px
-  left: 50%;
-  transform: translateX(-50%);
   a
     color: #2479CC;
     text-decoration: none;
   .prev
     float:left
+    padding-left:10px
   .next
     float:right  
+    padding-right:10px
   &:hover
     border-bottom-color: #D26911
     cursor:pointer

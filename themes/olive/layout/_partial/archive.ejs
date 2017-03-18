@@ -18,11 +18,33 @@
         <div class="main">
             <div class="list-box  shadow ">
                 <ul>
-                    <% page.posts.each(function(post){ %>
-                    <li class="article-item">
+                    <% page.posts.each(function(post,i){ %>
+                     <% var item='item'+i %> 
+                    <li class="article-item <%= item %>" >
                             <a href="<%- url_for(post.path) %>" >                      
                             <div class="article-box">
+                           
+                         
                             <div class="box-image">
+                             <% var content= post.content %>
+
+                            <% var re=/img src="(.*?)"/ %>
+                           
+
+                            <% var img=content.match(re) %>
+                            <% if(img!==null){  %>
+                            <% var bkg=img[1] %>
+                            <style>
+                            .<%= item%> .box-image {
+                              background:url('<%= bkg%>');
+                              background-size: cover; 
+                              background-position: 50%; 
+                              background-repeat: no-repeat;
+                            }
+                            </style>
+                            
+                            <% } %>
+                            
                             </div>
                             <div class="box-right">
                             <div class="title">

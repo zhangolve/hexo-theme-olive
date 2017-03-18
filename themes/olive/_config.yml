@@ -3,12 +3,18 @@ menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
 
 # Content
 excerpt_link: Read More
 fancybox: true
 
-
+headerpic: "http://7ktu2f.com1.z0.glb.clouddn.com/IMG_20141031_193748.jpg"
 # Sidebar
 sidebar: right
 widgets:
@@ -33,10 +39,13 @@ friends:
 archive_type: 'monthly'
 show_count: false
 
-# Miscellaneous
-google_analytics:
+
+
 favicon: /favicon.png
 twitter: 'zhangolve'
 github: 'zhangolve'
 weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
-fb_app_id:
+
+duoshuo: hktkdy
+google_analytics: 'UA-51305251-1'
+date: 'relative'
