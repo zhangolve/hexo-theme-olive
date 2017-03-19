@@ -1,26 +1,43 @@
 
 .main-header
   width: 100%
-  height:5rem;
+  height:5rem
   background-color: #ffffff
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1
   position: fixed
   top: 0
   left: 0
   right: 0
-  display:block
-.nav
-  float: left
+  display:-webkit-box
+  display:-ms-flexbox
+  display:flex
+  
 
+.nav
+  display:-webkit-box
+  display:-ms-flexbox
+  display:flex
+  -webkit-box-pack:justify
+  -ms-flex-pack:justify
+  justify-content:space-between
+
+
+@media screen and (max-width: 479px)
+{.nav-list{
+ padding: 0 0.5rem!important;
+} 
+}
+.logo
+  margin:0px
 .nav-list
-  float: left
+
   list-style: none
   color: #71777c
   padding: 0 1.5rem
   font-size: 1.33rem
-  -ms-flex-pack: center
-  -webkit-box-pack: center
-  justify-content: center
+  -ms-flex-pack: start
+  -webkit-box-pack: start
+  justify-content: flex-start;
   cursor: pointer
   a:hover
       border-bottom:1px solid #007fff

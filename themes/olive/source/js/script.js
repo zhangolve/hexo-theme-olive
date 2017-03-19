@@ -19,11 +19,14 @@ function scroll() { // or window.addEventListener("scroll"....
             var scrollBar=document.querySelector('.toTop-btn');
             scrollBar.style.display='block';
             var share=document.querySelector('.share-content');
+            if(share!==null)
+            {
             share.style.display='block';
+            }
         }
     } else {
         var header = document.querySelector('.main-header');
-            header.style.display = 'block';
+            header.style.display = 'flex';
         if (top > 50) {
             //显示顶栏
             
@@ -71,23 +74,40 @@ function scroll() { // or window.addEventListener("scroll"....
     var twitterUrl='http://twitter.com/home/?status='+'我发现了这篇好文章  '+document.title+','+'  分享给你'+'http://hktkdy.com/quiz-about-focus';
     var shareAll=document.querySelector('.share-content');
     var qrcode=document.getElementById("qrcode");
+    if(shareAll!==null)
+    {
     shareAll.onclick=function(e){
         
         switch(e.target.id)
         {
-            case 'toweixin' : new QRCode(qrcode, {
-    text: document.location.href,
-    width: 128,
-    height: 128,
-    colorDark : "#000000",
-    colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.H
-} );
+            case 'toweixin' :
+            var img=qrcode.querySelector('img');
+            if(img==null)
+            {
+            new QRCode(qrcode, {
+            text: document.location.href,
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+            } );
+
+            var img=qrcode.querySelector('img');
+            img.setAttribute('id','qrcodeImg');
+            }
             qrcode.style.display='block';
-            
+
             break;
             case 'toweibo' :window.open(weiboUrl);break;
             case 'totwitter' :window.open(twitterUrl);break;
         }
     } 
-   
+    }
+   /*当在屏幕上点击时，如果没有点击二维码区域或者分享到微信区域，则默认隐藏。*/
+   window.onclick=function(e){
+    if(e.target.id!=="qrcodeImg"&&e.target.id!=="toweixin")
+    {
+        qrcode.style.display='none';
+    }
+   }
