@@ -111,3 +111,15 @@ function scroll() { // or window.addEventListener("scroll"....
         qrcode.style.display='none';
     }
    }
+
+   //打赏功能实现
+
+   var rewardQr=document.querySelector(".reward-qr");
+   var rewardBtn=document.querySelector(".reward-btn");
+   if(rewardQr!==null)
+   {
+    rewardBtn.onhover=function(){
+    console.log('sss');
+    rewardQr.style.display="block";
+    }
+   }

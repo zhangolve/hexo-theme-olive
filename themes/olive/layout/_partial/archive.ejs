@@ -2,7 +2,7 @@
         <div class="left">
            
                 <ul class="sidebar-ul">
-                    <% config.category.forEach(function(category) {  %>
+                    <% theme.category.forEach(function(category) {  %>
                     <li class="nav-item sidebar">
                         <% var url= "/categories/"+category+"/" %>
                         <a href=<%= url %> class="link">
@@ -44,7 +44,7 @@
                             </style>
                             
                             <% } %>
-                            
+
                             </div>
                             <div class="box-right">
                             <div class="title">
@@ -76,7 +76,7 @@
         <div class="right">
           <div class="social">
               <div class="slogan">
-                我们在自己的世界里独自狂欢
+                <%= theme.slogan %>
               </div>
               <div class="link">
               <button class="btn btn-github">

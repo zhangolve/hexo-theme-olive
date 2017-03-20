@@ -39,7 +39,9 @@ friends:
 archive_type: 'monthly'
 show_count: false
 
-
+slogan: "我们在自己的世界里独自狂欢"
+#"分享是一种快乐"
+#"我们在自己的世界里独自狂欢"
 
 favicon: /favicon.png
 twitter: 'zhangolve'
@@ -49,3 +51,12 @@ weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
 duoshuo: hktkdy
 google_analytics: 'UA-51305251-1'
 date: 'relative'
+reward: false
+alipay: /img/alipay.jpg
+
+selectionEffect: true
+
+category: 
+- 前端
+- 大学
+- 生活

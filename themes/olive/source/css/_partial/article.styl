@@ -9,6 +9,19 @@ article{
   margin-top:5rem
   background-color: #fff
 
+@media screen and (max-width: 479px)
+  .article
+    width:80%  
+    blockquote
+      margin-left:5px!important
+      margin-right:5px!important
+    .highlight
+      margin:0 5px!important
+      padding:0 5px!important
+    pre
+      padding:5px 5px!important
+
+
 
 .article
   h1
@@ -18,12 +31,15 @@ article{
     line-height: 1.3
     display:block
     border-bottom:1px solid #ddd;
-  img
-    text-align: center
-    position:relative
-    left:50%
-    transform: translateX(-50%);
-    max-width: 100%;
+  .article-entry 
+    img
+      text-align: center
+      position:relative
+      left:50%
+      transform: translateX(-50%);
+      max-width: 100%
+    
+     
   p 
     display: block
     -webkit-margin-before: 1em
@@ -37,6 +53,7 @@ article{
   blockquote
     border-left:5px solid #ddd
     padding-left:0.5rem 
+
 
   ul
     font-size:16px
@@ -52,11 +69,12 @@ article{
     text-align:center
 
   .article-entry
+    border-bottom:1px solid #f4f5f5
     hr:nth-child(2)
       display:block
       border:0px
       height:10px
-      background-image:url('https://cdn-images-1.medium.com/max/800/1*l1rwI8JqPwqroFjU9Xbqfw.png') 
+      background-image:url('/img/bottom.png') 
       background-repeat: no-repeat
       background-position: 50%
     a
@@ -90,3 +108,14 @@ article{
       margin-left:3px
   .article-date
     font-size:16px
+
+
+if(selectionEffect)
+  .article-entry 
+    p::-moz-selection  
+        background-color:#e0dccc
+        color:#03A9F4
+    p::selection 
+        background-color:#e0dccc
+        color:#03A9F4
+

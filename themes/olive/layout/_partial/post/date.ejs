@@ -8,7 +8,7 @@
   	<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
   	
   	<%= post.date.fromNow() %>
-  
+
   <% var readTime='阅读时间:'+(Math.round(post.content.length/1000)+1) +'分钟' %>
 <div>
 <%= readTime %>

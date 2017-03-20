@@ -26,7 +26,7 @@ function scroll() { // or window.addEventListener("scroll"....
         }
     } else {
         var header = document.querySelector('.main-header');
-            header.style.display = 'block';
+            header.style.display = 'flex';
         if (top > 50) {
             //显示顶栏
             
@@ -109,5 +109,17 @@ function scroll() { // or window.addEventListener("scroll"....
     if(e.target.id!=="qrcodeImg"&&e.target.id!=="toweixin")
     {
         qrcode.style.display='none';
+    }
+   }
+
+   //打赏功能实现
+
+   var rewardQr=document.querySelector(".reward-qr");
+   var rewardBtn=document.querySelector(".reward-btn");
+   if(rewardQr!==null)
+   {
+    rewardBtn.onhover=function(){
+    console.log('sss');
+    rewardQr.style.display="block";
     }
    }

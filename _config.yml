@@ -11,11 +11,7 @@ language: zh-CN
 timezone:
 #category
 
-category: 
-- 前端
-- 大学
-- 生活
-
+selectionEffect: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
