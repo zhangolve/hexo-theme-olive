@@ -1,4 +1,15 @@
 /* all pure javascript no jquery */
+//黑夜模式，不等load完毕直接触发
+
+  var night=localStorage.getItem('night');
+    if(night==="true")
+    {
+        document.body.classList.add("night");
+    }     
+
+
+
+
 var lastScrollTop = 0;
 if (document.addEventListener) {
     document.addEventListener("scroll", scroll, false);
@@ -39,19 +50,17 @@ function scroll() { // or window.addEventListener("scroll"....
     lastScrollTop = st;
 }
 /* 直接写在javascript里面页面会闪一下 ，从白色过度到另一个颜色  */
-    window.onload=function(){
-    var article=document.getElementsByTagName('article');
-    if(!article.length)
-    {
-        document.body.style.backgroundColor="#f4f5f5";
-    }
-    }
+  //  window.onload=function(){
+  
+    //}
 
     var toTopBtn=document.querySelector('.toTop-btn');
     // btn
     toTopBtn.onclick=function(){
     window.scrollTo(0,0);
     }
+
+
     var title=document.title;
     window.onblur=function(){
        
@@ -60,6 +69,8 @@ function scroll() { // or window.addEventListener("scroll"....
     window.onfocus=function(){
        document.title=title;    //切换回本页面
     }
+
+
     /* 
     可以产生二维码了
    
@@ -108,7 +119,10 @@ function scroll() { // or window.addEventListener("scroll"....
    window.onclick=function(e){
     if(e.target.id!=="qrcodeImg"&&e.target.id!=="toweixin")
     {
+        if(qrcode!==null)
+        {
         qrcode.style.display='none';
+        }
     }
    }
 
@@ -121,5 +135,19 @@ function scroll() { // or window.addEventListener("scroll"....
     rewardBtn.onhover=function(){
     console.log('sss');
     rewardQr.style.display="block";
+    }
+   }
+
+   // 白天黑夜模式 
+   var toNight=document.querySelector(".tonight");
+   var today = document.querySelector(".day");
+   toNight.onclick=function(){
+    document.body.classList.toggle("night");
+    if(document.body.classList.contains("night"))
+    {
+    localStorage.setItem("night",true);
+    }
+    else{
+        localStorage.setItem("night",false);
     }
    }

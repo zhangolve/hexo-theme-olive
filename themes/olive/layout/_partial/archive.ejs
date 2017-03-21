@@ -74,30 +74,7 @@
         </div>
         </div>
         <div class="right">
-          <div class="social">
-              <div class="slogan">
-                <%= theme.slogan %>
-              </div>
-              <div class="link">
-              <button class="btn btn-github">
-              <% var githubUrl='https://github.com/'+theme.github  %>
-              <a href= <%= githubUrl %> target="_blank">
-             <i class="fa fa-github" aria-hidden="true"></i> GitHub
-             </a>
-              </button>
-
-              <button class="btn btn-twitter">
-               <% var twitterUrl='https://twitter.com/'+theme.twitter  %>
-              <i class="fa fa-twitter" aria-hidden="true"></i> 
-              <a href= <%= twitterUrl %> target="_blank">twitter
-              </button>
-              <button class="btn btn-weixin">
-              <% var weixinUrl=theme.weixin %>
-             <i class="fa fa-weixin" aria-hidden="true"></i> weixin
-             <img src=<%= weixinUrl%> />
-              </button>
-              </div>
-          </div>
+        <%- partial("social") %>
 
           <div class="tag">
             <div class="btn-group">
@@ -113,25 +90,7 @@
             <% }) %>
             </div>
           </div>
-          <div class="friends" >
-          <div class="friends-header">
-          <i class="fa fa-users" aria-hidden="true"></i>那些小伙伴们
-          </div>
-    <ul>
-
-    <% theme.friends.forEach(function(friend){  %>
-    <li class="friend">
-    <% var friendName=Object.keys(friend)[0]  %>
-    <% var friendUrl=friend[friendName] %>
-    <a href= <%= friendUrl %> target="_blank" >
-    <i class="fa fa-user" aria-hidden="true"></i>
-    <%=  friendName %>
-    </a>
-    </li>
-    <% })  %>
-   
-           </ul>
-          </div>
+         <%- partial("friends") %>
 
         </div>
     </section>

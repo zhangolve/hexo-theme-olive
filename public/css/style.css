@@ -430,7 +430,7 @@ article {
   display: block;
   border-bottom: 1px solid #ddd;
 }
-.article . article-entry img {
+.article .article-entry img {
   text-align: center;
   position: relative;
   left: 50%;
@@ -474,7 +474,7 @@ article {
   display: block;
   border: 0px;
   height: 10px;
-  background-image: url("https://cdn-images-1.medium.com/max/800/1*l1rwI8JqPwqroFjU9Xbqfw.png");
+  background-image: url("/img/bottom.png");
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -516,6 +516,14 @@ article {
 }
 .article .article-date {
   font-size: 16px;
+}
+.article-entry p::-moz-selection {
+  background-color: #e0dccc;
+  color: #03a9f4;
+}
+.article-entry p::selection {
+  background-color: #e0dccc;
+  color: #03a9f4;
 }
 .article-share {
   width: 15%;

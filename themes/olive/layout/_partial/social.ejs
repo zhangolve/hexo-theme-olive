@@ -1,0 +1,29 @@
+ <div class="social">
+<div class="slogan">
+  <%= theme.slogan %>
+</div>
+<div class="link">
+<% if(theme.github!==undefined) { %>
+<% var githubUrl='https://github.com/'+theme.github  %>
+<button class="btn btn-github">
+<a href= <%= githubUrl %> target="_blank">
+<i class="fa fa-github" aria-hidden="true"></i> GitHub
+</a>
+</button>
+<% } %>
+   <% if(theme.twitter!==undefined) { %>
+<button class="btn btn-twitter">
+ <% var twitterUrl='https://twitter.com/'+theme.twitter  %>
+<i class="fa fa-twitter" aria-hidden="true"></i> 
+<a href= <%= twitterUrl %> target="_blank">twitter
+</button>
+<% } %>
+<% if(theme.weixin!==undefined) { %>
+<button class="btn btn-weixin">
+<% var weixinUrl=theme.weixin %>
+<i class="fa fa-weixin" aria-hidden="true"></i> weixin
+<img src=<%= weixinUrl%> />
+</button>
+<% } %>
+</div>
+</div>

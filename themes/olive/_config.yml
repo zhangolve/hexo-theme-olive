@@ -26,6 +26,9 @@ widgets:
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
+
+friendsCall: 哪些小伙伴们 
+
 friends:
 - 百度火狐吧: http://tieba.baidu.com/f?kw=firefox
 - 破袜子: http://pewae.com/
@@ -45,7 +48,7 @@ slogan: "我们在自己的世界里独自狂欢"
 
 favicon: /favicon.png
 twitter: 'zhangolve'
-github: 'zhangolve'
+# github: 'zhangolve'
 weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
 
 duoshuo: hktkdy
