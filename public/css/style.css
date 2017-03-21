@@ -1,14 +1,3 @@
-/*
-@font-face
-  font-family: FontAwesome
-  font-style: normal
-  font-weight: normal
-  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
-  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
-       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
-       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
-       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
-*/
 html {
   margin: 0px;
   padding: 0px;
@@ -19,13 +8,6 @@ html {
 }
 ::-moz-scrollbars {
   display: none;
-/*
-  have not correct width of set layout
- 
-  
-  color: #333
-  word-break: break-word
-  */
 }
 @font-face {
   font-family: FontAwesome;
@@ -53,6 +35,40 @@ body {
 a {
   text-decoration: none;
   color: #333;
+}
+.night {
+  background-color: rgba(0,0,20,0.95) !important;
+  color: #fff;
+}
+.night a {
+  color: #fff;
+}
+.night footer,
+.night header {
+  background-color: rgba(12,12,31,0.64) !important;
+}
+.night .left {
+  background-color: rgba(48,45,34,0.31) !important;
+}
+.night .left li {
+  background-color: #17161f !important;
+}
+.night .right .social,
+.night .tag,
+.night .friends {
+  background-color: rgba(48,45,34,0.31) !important;
+}
+.night .main {
+  background-color: rgba(0,0,20,0.95) !important;
+}
+.night .main .list-box {
+  background-color: rgba(0,0,30,0.95) !important;
+}
+.night .main .list-box .box-right .title {
+  color: #fff !important;
+}
+.night {
+  transition: all 1s ease-in;
 }
 .main-header {
   width: 100%;
@@ -404,7 +420,6 @@ article {
 .article {
   width: 70%;
   margin-top: 5rem;
-  background-color: #fff;
 }
 @media screen and (max-width: 479px) {
   .article {
@@ -572,7 +587,7 @@ article {
   background: #f8f8f8;
   padding: 15px 20px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: color-border;
   border-width: 1px 0;
   overflow: auto;
   color: #459eca;
@@ -588,7 +603,7 @@ article {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
+  background: color-background;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -632,7 +647,7 @@ article {
 .article-entry .gist {
   margin: 0 -20px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: color-border;
   border-width: 1px 0;
   background: #f8f8f8;
   padding: 15px 20px 15px 0;
@@ -669,7 +684,7 @@ article {
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #258fb8;
+  color: color-link;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -784,11 +799,14 @@ pre .javascript .function {
   transform: translateX(-50%);
   height: 50px;
   width: 50px;
-  background-color: #e26d6d;
+  background-color: rgba(221,51,34,0.7);
   border-radius: 50%;
 }
 .reward-btn:hover .reward-qr {
   display: block;
+}
+.reward-btn:hover {
+  background-color: #d32;
 }
 .reward-qr {
   display: none;
@@ -821,16 +839,11 @@ pre .javascript .function {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/*
-if sidebar and sidebar isnt bottom
-  #main
-    @media mq-normal
-      column(main-column)
-
-if sidebar is left
-  @media mq-normal
-    #main
-      float: right
-
-
-*/
+.copyright {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.copyright a {
+  color: #2d96bd;
+}

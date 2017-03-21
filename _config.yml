@@ -13,6 +13,11 @@ timezone:
 
 selectionEffect: true
 
+copyright: true
+
+# 在文章后添加版权信息 ture 是，else 否 
+
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://hktkdy.com

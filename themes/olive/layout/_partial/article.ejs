@@ -23,12 +23,12 @@
         <%- post.content %>
       <% } %>
     </div>
-    <% if(theme.reward) { %>
-
     <%- partial('post/money') %>
+    <% if(theme.copyright){  %>
+    <%- partial('post/copyright') %>
     <% } %>
     <%- partial('post/category') %>
- 
+  
   </div>
    <%- partial('post/duoshuo') %>
  

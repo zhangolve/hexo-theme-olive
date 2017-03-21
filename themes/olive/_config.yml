@@ -54,7 +54,8 @@ weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
 duoshuo: hktkdy
 google_analytics: 'UA-51305251-1'
 date: 'relative'
-reward: false
+reward: true
+copyright: true 
 alipay: /img/alipay.jpg
 
 selectionEffect: true
