@@ -14,7 +14,9 @@ feed:
 excerpt_link: Read More
 fancybox: true
 
-headerpic: "http://7ktu2f.com1.z0.glb.clouddn.com/IMG_20141031_193748.jpg"
+headerpic: "/img/logo.jpg"
+
+# http://7ktu2f.com1.z0.glb.clouddn.com/IMG_20141031_193748.jpg
 # Sidebar
 sidebar: right
 widgets:
@@ -27,7 +29,7 @@ widgets:
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
 
-friendsCall: 哪些小伙伴们 
+friendsCall: 那些小伙伴们 
 
 friends:
 - 百度火狐吧: http://tieba.baidu.com/f?kw=firefox
@@ -46,11 +48,13 @@ slogan: "我们在自己的世界里独自狂欢"
 #"分享是一种快乐"
 #"我们在自己的世界里独自狂欢"
 
-favicon: /favicon.png
+favicon: "/favicon.png"
+
 twitter: 'zhangolve'
+
 # github: 'zhangolve'
 weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
-
+email: 'zhangolve@gmail.com'
 duoshuo: hktkdy
 google_analytics: 'UA-51305251-1'
 date: 'relative'

@@ -132,4 +132,8 @@ function scroll() { // or window.addEventListener("scroll"....
     }
    }
 
-  
+  var articleEntry=document.querySelector(".article-entry");
+  if(articleEntry!==null)
+  {
+    document.body.style.backgroundColor="#fff";
+  }
