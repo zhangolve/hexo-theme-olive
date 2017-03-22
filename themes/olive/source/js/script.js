@@ -118,22 +118,31 @@ function scroll() { // or window.addEventListener("scroll"....
         qrcode.style.display='none';
         }
     }
-   }
-
-   //打赏功能实现
-
-   var rewardQr=document.querySelector(".reward-qr");
-   var rewardBtn=document.querySelector(".reward-btn");
-   if(rewardQr!==null)
+   if(e.target.id=='rewardme'&&e.target.className!=="reward-btn")
    {
-    rewardBtn.onhover=function(){
-    console.log('sss');
-    rewardQr.style.display="block";
-    }
+    var rewardQr=document.querySelector('.reward-qr');
+        rewardQr.style.display="none";
    }
+
+   }
+
+  
 
   var articleEntry=document.querySelector(".article-entry");
   if(articleEntry!==null)
   {
     document.body.style.backgroundColor="#fff";
   }
+
+//当鼠标滑倒打赏图标时，展示二维码
+  function showRewardQr(){
+    var rewardBtn=document.querySelector('.reward-btn');
+    rewardBtn.onmouseover=function(){
+    var rewardQr=document.querySelector('.reward-qr');
+    if(rewardQr){
+        rewardQr.style.display='block'
+    }
+    }
+  }
+
+  showRewardQr();
