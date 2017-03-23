@@ -57,8 +57,9 @@ weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
 email: 'zhangolve@gmail.com'
 
 
-duoshuo: hktkdy
-# 多说ID 。
+disqus: hktkdy-1
+
+# disqus ID ，如果不设置的话，则为无评论状态
 
 google_analytics: 'UA-51305251-1'
 date: 'relative'
@@ -74,15 +75,16 @@ copyright: true
 alipay: /img/alipay.jpg
 
 # 如果已经开启了打赏功能，则在alipay的设置中添加你的图片位置或云图片链接。
+
 selectionEffect: true
 
-# 显示左侧需要展示的目录，建议使用三到五个目录
 
 iewarn: true 
 
 # ie10-的不兼容性提示
 
 
+# 显示左侧需要展示的目录，建议使用三到五个目录
 category: 
 - 前端
 - 大学

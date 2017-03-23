@@ -1,3 +1,4 @@
+<%if(theme.disqus!==null) { %>
 <% var Fullkey= post.path %>
 <% var keyArr=Fullkey.split('/') %>
 <% var key=keyArr[keyArr.length-3]+'/'+keyArr[keyArr.length-2] %>
@@ -11,7 +12,9 @@ this.page.identifier = "<%= key %> " ; // Replace PAGE_IDENTIFIER with your page
 
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
-s.src = 'https://hktkdy-1.disqus.com/embed.js';
+var url='https://'+"<%= theme.disqus %>"+'.disqus.com/embed.js';
+s.src = url;
+
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
@@ -19,3 +22,4 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>
 Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
 </noscript>
+<% }%>
