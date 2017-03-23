@@ -1,0 +1,96 @@
+ <section class="main-body">
+        <div class="left">
+           
+                <ul class="sidebar-ul">
+                    <% theme.category.forEach(function(category) {  %>
+                    <li class="nav-item sidebar">
+                        <% var url= "/categories/"+category+"/" %>
+                        <a href=<%= url %> class="link">
+        <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+        <%= category %>
+      </a>
+                    </li>
+                    <% }) %>
+                   
+                </ul>
+            
+       </div>
+        <div class="main">
+            <div class="list-box  shadow ">
+                <ul>
+                    <% page.posts.each(function(post,i){ %>
+                     <% var item='item'+i %> 
+                    <li class="article-item <%= item %>" >
+                            <a href="<%- url_for(post.path) %>" >                      
+                            <div class="article-box">
+                           
+                         
+                            <div class="box-image">
+                             <% var content= post.content %>
+
+                            <% var re=/img src="(.*?)"/ %>
+                           
+
+                            <% var img=content.match(re) %>
+                            <% if(img!==null){  %>
+                            <% var bkg=img[1] %>
+                            <style>
+                            .<%= item%> .box-image {
+                              background:url('<%= bkg%>');
+                              background-size: cover; 
+                              background-position: 50%; 
+                              background-repeat: no-repeat;
+                            }
+                            </style>
+                            
+                            <% } %>
+
+                            </div>
+                            <div class="box-right">
+                            <div class="title">
+                            <%= post.title %>
+                            </div>
+                            <div class="info">
+                            <% var date=post.date   %>
+                            <% date=JSON.stringify(date,null,'\t').substr(1,10) %>
+                           
+                            <%= date %>
+                            </div>
+                            </div>
+                            </div>
+                            </a>
+                    </li>
+                     <% }) %>
+                  
+                </ul>
+            </div>
+            <div class="page">
+            <%- paginator('/', [], {
+  perPage: 10,
+  format: 'page/%d/',
+  layout: ['archive', 'index'],
+  
+}) %>
+        </div>
+        </div>
+        <div class="right">
+        <%- partial("social") %>
+
+          <div class="tag">
+            <div class="btn-group">
+            <% site.tags.each(function(tag,i){ %>
+            <% if(i<10) { %>
+            <% var tagUrl='/tags/'+tag.name  %>    
+            <a href=<%= tagUrl %>  >    
+            <button class="btn-tag">
+            <%= tag.name %>
+            </button>
+            </a>
+            <% } %>
+            <% }) %>
+            </div>
+          </div>
+         <%- partial("friends") %>
+
+        </div>
+    </section>
