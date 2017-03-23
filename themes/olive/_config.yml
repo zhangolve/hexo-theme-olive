@@ -10,15 +10,14 @@ feed:
   hub:
   content:
 
-# Content
-excerpt_link: Read More
-fancybox: true
+
 
 headerpic: "/img/logo.jpg"
+# 导航栏上的顶部logo
+
 
 # http://7ktu2f.com1.z0.glb.clouddn.com/IMG_20141031_193748.jpg
-# Sidebar
-sidebar: right
+
 widgets:
 - category
 - tag
@@ -50,19 +49,39 @@ slogan: "我们在自己的世界里独自狂欢"
 
 favicon: "/favicon.png"
 
-twitter: 'zhangolve'
+# 右侧分享栏目里面的必要信息
 
+twitter: 'zhangolve'
 github: 'zhangolve'
 weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
 email: 'zhangolve@gmail.com'
+
+
 duoshuo: hktkdy
+# 多说ID 。
+
 google_analytics: 'UA-51305251-1'
 date: 'relative'
+#在文章的展示页是否显示相对日期
 reward: true
+
 copyright: true 
+
+# 是否开启版权说明，true则默认在每篇文章的最后添加版权声明，如果想指定某一篇文章的版权，可以在文章结尾处添加---nocopyriht
+
+
+
 alipay: /img/alipay.jpg
 
+# 如果已经开启了打赏功能，则在alipay的设置中添加你的图片位置或云图片链接。
 selectionEffect: true
+
+# 显示左侧需要展示的目录，建议使用三到五个目录
+
+iewarn: true 
+
+# ie10-的不兼容性提示
+
 
 category: 
 - 前端
