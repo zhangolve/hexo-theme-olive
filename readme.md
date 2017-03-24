@@ -56,97 +56,110 @@
 
 # 目录结构
 
+ 
+	│  LICENSE
+	│  readme.md
+	│  _config.yml
+	│
+	├─languages
+	│      default.yml
+	│      fr.yml
+	│      nl.yml
+	│      no.yml
+	│      ru.yml
+	│      zh-CN.yml
+	│      zh-TW.yml
+	│
+	                   
+	layout                          
+	 │  archive.ejs                 
+	 │  category.ejs                
+	 │  index.ejs       首页            
+	 │  layout.ejs                  
+	 │  page.ejs                    
+	 │  post.ejs                    
+	 │  tag.ejs                     
+	 │                              
+	 ├─_partial                     
+	 │  │  after-footer.ejs          
+	 │  │  archive-post.ejs         
+	 │  │  archive.ejs              
+	 │  │  article.ejs              
+	 │  │  footer.ejs    footer模板           
+	 │  │  friends.ejs   右侧友情链接模板           
+	 │  │  google-analytics.ejs     谷歌分析模板
+	 │  │  head.ejs      网站头部引用模板           
+	 │  │  header.ejs    网站头部导航栏模板           
+	 │  │  iewarn.esj    低版本ie浏览器警告信息模板           
+	 │  │  share.ejs     文章分享模板           
+	 │  │  social.ejs    右侧社交网路信息模板           
+	 │  │                           
+	 │  └─post                      
+	 │   ---    category.ejs  分类      
+	 │   ---    copyright.ejs 文章版权声明      
+	 │   ---    date.ejs      日期      
+	 │   ---    disqus.ejs    第三方评论disqus      
+	 │   ---    money.ejs     打赏      
+	 │   ---    nav.ejs       导航       
+	 │   ---    tags.ejs      标签      
+	 │   ---    title.ejs     文章题目      
+	 │                              
+	 └─_widget                      
+	     --- archive.ejs            
+	     --- category.ejs           
+	     --- recent_posts.ejs       
+	                                         
+	source    资源文件夹                   
+	  │  favicon.png    网站标题栏上的图标            
+	  │                             
+	  ├─css                         
+	  │  │  night.styl   夜晚模式样式           
+	  │  │  style.styl   主样式           
+	  │  │  _variables.styl   styl变量     
+	  │  │                          
+	  │  ├─fonts   本地字体文件夹                 
+	  │  │      fontawesome-webfont.
+	  │  │      fontawesome-webfont.
+	  │  │      fontawesome-webfont.
+	  │  │      fontawesome-webfont.
+	  │  │      FontAwesome.otf     
+	  │  │                          
+	  │  └─_partial                 
+	  │          archive.styl   首页样式    
+	  │          article.styl   文章页面样式    
+	  │          copyright.styl 版权说明样式    
+	  │          footer.styl    底部footer样式    
+	  │          header.styl    头部导航样式    
+	  │          highlight.styl 代码高亮样式    
+	  │          iewarn.styl    低版本ie浏览器警告样式    
+	  │          money.styl     打赏功能样式    
+	  │          share.styl     分享功能样式    
+	  │                             
+	  ├─img                         
+	  │  ---    bottom.png   文章页面分割线图片          
+	  │  ---    logo.jpg     网站logo图片           
+	  │                             
+	  └─js                          
+	       ---   iewarn.js    低版本ie浏览器检测脚本         
+	       ---   lightmode.js 灯光模式切换脚本         
+	       ---   qrcode.js    网站链接二维码生成脚本         
+	       ---   script.js    网站主js脚本         
+	                                
 
- .gitignore                     
- LICENSE     MIT协议                 
- readme.md   使用文档              
- _config.yml 主题配置              
-                                
-languages      语言文件夹                 
-     default.yml     默认语言          
-     fr.yml         法语            
-     nl.yml                     
-     no.yml                     
-     ru.yml                   
-     zh-CN.yml     简体             
-     zh-TW.yml     繁体             
-                                
-layout                          
- │  archive.ejs                 
- │  category.ejs                
- │  index.ejs       首页            
- │  layout.ejs                  
- │  page.ejs                    
- │  post.ejs                    
- │  tag.ejs                     
- │                              
- ├─_partial                     
- │  │  after-footer.ejs          
- │  │  archive-post.ejs         
- │  │  archive.ejs              
- │  │  article.ejs              
- │  │  footer.ejs    footer模板           
- │  │  friends.ejs   右侧友情链接模板           
- │  │  google-analytics.ejs     谷歌分析模板
- │  │  head.ejs      网站头部引用模板           
- │  │  header.ejs    网站头部导航栏模板           
- │  │  iewarn.esj    低版本ie浏览器警告信息模板           
- │  │  share.ejs     文章分享模板           
- │  │  social.ejs    右侧社交网路信息模板           
- │  │                           
- │  └─post                      
- │          category.ejs  分类      
- │          copyright.ejs 文章版权声明      
- │          date.ejs      日期      
- │          disqus.ejs    第三方评论disqus      
- │          money.ejs     打赏      
- │          nav.ejs       导航       
- │          tags.ejs      标签      
- │          title.ejs     文章题目      
- │                              
- └─_widget                      
-         archive.ejs            
-         category.ejs           
-         recent_posts.ejs       
-                                         
-source    资源文件夹                   
-  │  favicon.png    网站标题栏上的图标            
-  │                             
-  ├─css                         
-  │  │  night.styl   夜晚模式样式           
-  │  │  style.styl   主样式           
-  │  │  _variables.styl   styl变量     
-  │  │                          
-  │  ├─fonts   本地字体文件夹                 
-  │  │      fontawesome-webfont.
-  │  │      fontawesome-webfont.
-  │  │      fontawesome-webfont.
-  │  │      fontawesome-webfont.
-  │  │      FontAwesome.otf     
-  │  │                          
-  │  └─_partial                 
-  │          archive.styl   首页样式    
-  │          article.styl   文章页面样式    
-  │          copyright.styl 版权说明样式    
-  │          footer.styl    底部footer样式    
-  │          header.styl    头部导航样式    
-  │          highlight.styl 代码高亮样式    
-  │          iewarn.styl    低版本ie浏览器警告样式    
-  │          money.styl     打赏功能样式    
-  │          share.styl     分享功能样式    
-  │                             
-  ├─img                         
-  │      bottom.png   文章页面分割线图片          
-  │      logo.jpg     网站logo图片           
-  │                             
-  └─js                          
-          iewarn.js    低版本ie浏览器检测脚本         
-          lightmode.js 灯光模式切换脚本         
-          qrcode.js    网站链接二维码生成脚本         
-          script.js    网站主js脚本         
-                                
+# 环境
 
-
+$ hexo version
+hexo: 3.1.1
+os: Windows_NT 10.0.14393 win32 ia32
+http_parser: 2.6.0
+node: 5.5.0
+v8: 4.6.85.31
+uv: 1.8.0
+zlib: 1.2.8
+ares: 1.10.1-DEV
+icu: 56.1
+modules: 47
+openssl: 1.0.2e
 
 
 
