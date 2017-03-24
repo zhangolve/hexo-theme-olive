@@ -6,10 +6,24 @@
 
  
   	<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
-  	
-  	<%= post.date.fromNow() %>
+  	<% var reTime=post.date.fromNow() %>
+  	<% var reTimeArray=reTime.split(' ') %>
+  	<% var newI18nArray=[] %>
+  	<% for(var i=0;i<reTimeArray.length;i++) {   %>
+  	<% if(i==0) { %>
+  	<%  newI18nArray.push(reTimeArray[0])  } %>
+  	<% if(i>0&&i<reTimeArray.length-1) { %>
+  	<% newI18nArray.push(__(reTimeArray[i]))  %> 	
+  	<% }%>
+  	<% if(i==reTimeArray.length-1){ %>
+  	<%	newI18nArray.push( __("ago") ) %>
+  	<% }%>	
+  	<% } %>
+  	<% var ReI18nTime=newI18nArray.join('') %>
+  	<%= ReI18nTime %>
 
-  <% var readTime='阅读时间:'+(Math.round(post.content.length/1000)+1) +'分钟' %>
+
+  <% var readTime= __("read_time") +": " +(Math.round(post.content.length/1000)+1) +'分钟' %>
 <div>
 <%= readTime %>
 </div>
