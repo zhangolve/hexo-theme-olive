@@ -20,10 +20,8 @@ headerpic: "/img/logo.jpg"
 
 widgets:
 - category
-- tag
-- tagcloud
 - archive
-- recent_posts
+
 
 
 
