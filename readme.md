@@ -85,16 +85,14 @@ layout
  │  │  archive-post.ejs         
  │  │  archive.ejs              
  │  │  article.ejs              
- │  │  footer.ejs               
- │  │  friends.ejs              
- │  │  google-analytics.ejs     
- │  │  head.ejs                 
- │  │  header.ejs               
- │  │  iewarn.esj               
- │  │  mobile-nav.ejs           
- │  │  share.ejs                
- │  │  sidebar.ejs              
- │  │  social.ejs               
+ │  │  footer.ejs    footer模板           
+ │  │  friends.ejs   右侧友情链接模板           
+ │  │  google-analytics.ejs     谷歌分析模板
+ │  │  head.ejs      网站头部引用模板           
+ │  │  header.ejs    网站头部导航栏模板           
+ │  │  iewarn.esj    低版本ie浏览器警告信息模板           
+ │  │  share.ejs     文章分享模板           
+ │  │  social.ejs    右侧社交网路信息模板           
  │  │                           
  │  └─post                      
  │          category.ejs  分类      
