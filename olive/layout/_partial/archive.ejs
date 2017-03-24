@@ -1,6 +1,6 @@
  <section class="main-body">
         <div class="left">
-           
+                <% if(theme.category!==null) { %>
                 <ul class="sidebar-ul">
                     <% theme.category.forEach(function(category) {  %>
                     <li class="nav-item sidebar">
@@ -13,6 +13,7 @@
                     <% }) %>
                    
                 </ul>
+                <% } %>
             
        </div>
         <div class="main">

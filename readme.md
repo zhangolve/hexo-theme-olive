@@ -33,6 +33,8 @@
 - [HEXO.IO](https://hexo.io/zh-cn/docs/) ，Hexo 官方文档，给我提供了很多参考
 - [写一个自己的Hexo主题](https://segmentfault.com/a/1190000006057336) ,这篇16年7月份的文章，对我最初写这个主题很有参考价值
 - [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) ，hexo的官方主题，虽然本身很丑，但是代码逻辑很清晰，给了我很大的参考
+- [hexo-theme-next wiki](https://github.com/iissnan/hexo-theme-next/wiki) ，我在编写本主题代码的时候，并没有参考这个主题，但是当我想要写一下本主题的配置的时候，发现这个主题的wiki已经说得很详细了。表示感谢。
+
 
 
 # 其他

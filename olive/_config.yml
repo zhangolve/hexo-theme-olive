@@ -25,8 +25,7 @@ widgets:
 - archive
 - recent_posts
 
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
+
 
 friendsCall: 那些小伙伴们 
 
@@ -76,15 +75,19 @@ alipay: /img/alipay.jpg
 
 # 如果已经开启了打赏功能，则在alipay的设置中添加你的图片位置或云图片链接。
 
-selectionEffect: true
+
 
 
 iewarn: true 
 
 # ie10-的不兼容性提示
 
+# 标明博客的起始时间，对我们这种已经几年的博客，还是很有必要的。
 
-# 显示左侧需要展示的目录，建议使用三到五个目录
+
+since: 2014
+
+# 显示左侧需要展示的目录，建议使用三到五个目录 ，如果不设置的话当然也没有问题
 category: 
 - 前端
 - 大学
