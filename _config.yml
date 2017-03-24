@@ -10,8 +10,6 @@ feed:
   hub:
   content:
 
-
-
 headerpic: "/img/logo.jpg"
 # 导航栏上的顶部logo
 
@@ -22,6 +20,11 @@ widgets:
 - category
 - archive
 
+# 显示左侧需要展示的目录，建议使用三到五个目录 ，如果不设置的话当然也没有问题
+category: 
+- 前端
+- 大学
+- 生活
 
 
 
@@ -34,11 +37,6 @@ friends:
 - 张鑫旭-鑫空间: http://www.zhangxinxu.com/wordpress/
 - Joyful Physics博客: http://www.cnblogs.com/joyfulphysics
 
-
-
-# widget behavior
-archive_type: 'monthly'
-show_count: false
 
 slogan: "我们在自己的世界里独自狂欢"
 #"分享是一种快乐"
@@ -61,14 +59,16 @@ disqus: hktkdy-1
 google_analytics: 'UA-51305251-1'
 date: 'relative'
 #在文章的展示页是否显示相对日期
-reward: true
+
+
+
 
 copyright: true 
 
 # 是否开启版权说明，true则默认在每篇文章的最后添加版权声明，如果想指定某一篇文章的版权，可以在文章结尾处添加---nocopyriht
 
 
-
+reward: true
 alipay: /img/alipay.jpg
 
 # 如果已经开启了打赏功能，则在alipay的设置中添加你的图片位置或云图片链接。
@@ -84,9 +84,3 @@ iewarn: true
 
 
 since: 2014
-
-# 显示左侧需要展示的目录，建议使用三到五个目录 ，如果不设置的话当然也没有问题
-category: 
-- 前端
-- 大学
-- 生活
