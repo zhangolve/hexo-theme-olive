@@ -54,8 +54,99 @@
 
 
 
+# 目录结构
 
 
+ .gitignore                     
+ LICENSE     MIT协议                 
+ readme.md   使用文档              
+ _config.yml 主题配置              
+                                
+languages      语言文件夹                 
+     default.yml     默认语言          
+     fr.yml         法语            
+     nl.yml                     
+     no.yml                     
+     ru.yml                   
+     zh-CN.yml     简体             
+     zh-TW.yml     繁体             
+                                
+layout                          
+ │  archive.ejs                 
+ │  category.ejs                
+ │  index.ejs       首页            
+ │  layout.ejs                  
+ │  page.ejs                    
+ │  post.ejs                    
+ │  tag.ejs                     
+ │                              
+ ├─_partial                     
+ │  │  after-footer.ejs          
+ │  │  archive-post.ejs         
+ │  │  archive.ejs              
+ │  │  article.ejs              
+ │  │  footer.ejs               
+ │  │  friends.ejs              
+ │  │  google-analytics.ejs     
+ │  │  head.ejs                 
+ │  │  header.ejs               
+ │  │  iewarn.esj               
+ │  │  mobile-nav.ejs           
+ │  │  share.ejs                
+ │  │  sidebar.ejs              
+ │  │  social.ejs               
+ │  │                           
+ │  └─post                      
+ │          category.ejs  分类      
+ │          copyright.ejs 文章版权声明      
+ │          date.ejs      日期      
+ │          disqus.ejs    第三方评论disqus      
+ │          money.ejs     打赏      
+ │          nav.ejs       导航       
+ │          tags.ejs      标签      
+ │          title.ejs     文章题目      
+ │                              
+ └─_widget                      
+         archive.ejs            
+         category.ejs           
+         recent_posts.ejs       
+                                         
+source    资源文件夹                   
+  │  favicon.png    网站标题栏上的图标            
+  │                             
+  ├─css                         
+  │  │  night.styl   夜晚模式样式           
+  │  │  style.styl   主样式           
+  │  │  _variables.styl   styl变量     
+  │  │                          
+  │  ├─fonts   本地字体文件夹                 
+  │  │      fontawesome-webfont.
+  │  │      fontawesome-webfont.
+  │  │      fontawesome-webfont.
+  │  │      fontawesome-webfont.
+  │  │      FontAwesome.otf     
+  │  │                          
+  │  └─_partial                 
+  │          archive.styl   首页样式    
+  │          article.styl   文章页面样式    
+  │          copyright.styl 版权说明样式    
+  │          footer.styl    底部footer样式    
+  │          header.styl    头部导航样式    
+  │          highlight.styl 代码高亮样式    
+  │          iewarn.styl    低版本ie浏览器警告样式    
+  │          money.styl     打赏功能样式    
+  │          share.styl     分享功能样式    
+  │                             
+  ├─img                         
+  │      bottom.png   文章页面分割线图片          
+  │      logo.jpg     网站logo图片           
+  │                             
+  └─js                          
+          iewarn.js    低版本ie浏览器检测脚本         
+          lightmode.js 灯光模式切换脚本         
+          qrcode.js    网站链接二维码生成脚本         
+          script.js    网站主js脚本         
+                                
 
 
 

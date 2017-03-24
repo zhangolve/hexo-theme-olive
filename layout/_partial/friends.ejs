@@ -1,0 +1,19 @@
+ <div class="friends" >
+          <div class="friends-header">
+          <i class="fa fa-users" aria-hidden="true"></i><%=  theme.friendsCall %>
+          </div>
+    <ul>
+
+    <% theme.friends.forEach(function(friend){  %>
+    <li class="friend">
+    <% var friendName=Object.keys(friend)[0]  %>
+    <% var friendUrl=friend[friendName] %>
+    <a href= <%= friendUrl %> target="_blank" >
+    <i class="fa fa-user" aria-hidden="true"></i>
+    <%=  friendName %>
+    </a>
+    </li>
+    <% })  %>
+   
+           </ul>
+          </div>

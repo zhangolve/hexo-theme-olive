@@ -1,0 +1,41 @@
+<article>
+  <%- partial('share') %>
+<div class="article main-body" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+  </div>
+  <div class="article-inner">
+   
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <%- partial('post/money') %>
+    <% if(theme.copyright){  %>
+    <%- partial('post/copyright') %>
+    <% } %>
+    <%- partial('post/category') %>
+  
+  </div>
+   <%- partial('post/disqus') %>
+ 
+  <!--上一篇下一篇 -->
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+
+</div>
+</article>
