@@ -44,7 +44,9 @@ friends:
 
 
 
+
 # 右侧边栏网站slogan自定义
+
 slogan: "我们在自己的世界里独自狂欢"
 
 # 网站favicon 自定义
@@ -61,8 +63,9 @@ email: 'zhangolve@gmail.com'
 # disqus ID ，如果不设置的话，则为无评论状态
 disqus: 
 
-# 在引号内填入你的谷歌分析id。
 
+
+# 在引号内填入你的谷歌分析id。
 google_analytics: ''
 
 #在文章的展示页是否显示相对日期
@@ -70,9 +73,11 @@ date: 'relative'
 
 
 
+
 # 是否开启版权说明，true则默认在每篇文章的最后添加版权声明，如果想指定某一篇文章的版权，
 #可以在文章结尾处添加---nocopyriht ，详见实例文章sample.md
 copyright: true 
+
 
 # 如果已经开启了打赏功能，则在alipay的设置中添加你的图片位置或云图片链接。
 reward: true

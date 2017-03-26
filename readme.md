@@ -33,7 +33,9 @@
 
 ![](http://7ktu2f.com1.z0.glb.clouddn.com/hktkdycom.png)
 
+
 **需要注意的是：由于博客搭建在Github Pages上面，如果您的访问速度不理想，可能并非是博客主题系统本身的问题，而是服务器的问题。**
+
 
 
 # 你为什么要选择这个主题
