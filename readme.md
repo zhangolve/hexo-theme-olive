@@ -24,6 +24,82 @@
 - 博客首页文章中图片缩略图展示
 - 用户离开本博客页面后的标题彩蛋
 
+# 展示
+
+直接访问我的个人博客去看喽： [http://hktkdy.com](http://hktkdy.com)
+
+移动端可复制网站或扫描下方二维码
+
+
+![](http://7ktu2f.com1.z0.glb.clouddn.com/hktkdycom.png)
+
+**需要注意的是：由于博客搭建在Github Pages上面，如果您的访问速度不理想，可能并非是博客主题系统本身的问题，而是服务器的问题。**
+
+
+# 你为什么要选择这个主题
+
+好了，前面简单罗列了这个主题的特色和功能点。现在问题来了，如果你正在使用hexo博客系统书写博客，可能正在用一个其他的主题，那么凭什么要花时间，换一个其他的的主题呢？
+
+我认为除了以上的特色和功能点之外，还是看个人的喜好和风格。
+
+对我来讲，我个人是喜好偏向知乎专栏风格的文章页面的，我认为这样的设计让我更专注于阅读，然而其他的主题，很少有在这一点上有令我满意的，如果你喜欢这样的风格，或许你会喜欢这个主题。
+
+对我来讲，有点朋友圈的文章的味道。甭管你喜不喜欢朋友圈里那些被转发的10万+，你都应该对朋友圈很是熟悉。据我了解，这个主题，有那么点味道，当然，并不浓厚。我自己也不会写那种「标题党」的文章。如果你喜欢这样的风格，或许你会喜欢这个主题。
+
+对我来讲，我喜欢淡色系，但是淡色系在夜晚的时候又会很让人头疼。因此，这个主题又加入了「夜晚模式」，据我所知，这也是首个Hexo主题里含有夜晚模式的。如果你认为夜晚模式是必不可少的，或许你会喜欢这个主题。
+
+当然，如果以上所说所有如果都不能成为一个你选择它的理由的话。那么我要说，就因为他够小众，你觉得跟别人撞衫尴尬吗？如果尴尬，跟别人用同一个博客主题为什么就不尴尬呢，选择它，或许会让你撞衫的几率更小。哈哈。
+
+
+然而，让人不喜欢的理由也很多，这个主题在细节之处的打磨还不够，有些地方还比较粗糙。
+
+# 使用
+
+## 安装
+
+$ git clone https://github.com/zhangolve/hexo-theme-olive.git themes/olive
+配置
+
+修改hexo根目录下的 _config.yml ： theme: yilia
+
+
+
+
+## 环境
+
+需要注意的是，我自己的运行环境是：
+
+	$ hexo version
+	hexo: 3.1.1
+	os: Windows_NT 10.0.14393 win32 ia32
+	http_parser: 2.6.0
+	node: 5.5.0
+	v8: 4.6.85.31
+	uv: 1.8.0
+	zlib: 1.2.8
+	ares: 1.10.1-DEV
+	icu: 56.1
+	modules: 47
+	openssl: 1.0.2e
+
+
+没有对其他运行环境进行测试，如果此主题不能正常使用，请向我反馈，不胜感激。
+
+
+
+## 更新
+
+	cd themes/olive
+	git pull
+
+# 配置
+
+主题配置文件在主目录下的_config.yml，请根据自己需要修改使用。 
+
+请安装好之后，手动打开_config.yml 文件，里面针对每一项配置都有较为详细的说明.
+
+
+
 
 
 # 致谢
@@ -56,95 +132,95 @@
 
 # 目录结构
 
-
- .gitignore                     
- LICENSE     MIT协议                 
- readme.md   使用文档              
- _config.yml 主题配置              
-                                
-languages      语言文件夹                 
-     default.yml     默认语言          
-     fr.yml         法语            
-     nl.yml                     
-     no.yml                     
-     ru.yml                   
-     zh-CN.yml     简体             
-     zh-TW.yml     繁体             
-                                
-layout                          
- │  archive.ejs                 
- │  category.ejs                
- │  index.ejs       首页            
- │  layout.ejs                  
- │  page.ejs                    
- │  post.ejs                    
- │  tag.ejs                     
- │                              
- ├─_partial                     
- │  │  after-footer.ejs          
- │  │  archive-post.ejs         
- │  │  archive.ejs              
- │  │  article.ejs              
- │  │  footer.ejs    footer模板           
- │  │  friends.ejs   右侧友情链接模板           
- │  │  google-analytics.ejs     谷歌分析模板
- │  │  head.ejs      网站头部引用模板           
- │  │  header.ejs    网站头部导航栏模板           
- │  │  iewarn.esj    低版本ie浏览器警告信息模板           
- │  │  share.ejs     文章分享模板           
- │  │  social.ejs    右侧社交网路信息模板           
- │  │                           
- │  └─post                      
- │          category.ejs  分类      
- │          copyright.ejs 文章版权声明      
- │          date.ejs      日期      
- │          disqus.ejs    第三方评论disqus      
- │          money.ejs     打赏      
- │          nav.ejs       导航       
- │          tags.ejs      标签      
- │          title.ejs     文章题目      
- │                              
- └─_widget                      
-         archive.ejs            
-         category.ejs           
-         recent_posts.ejs       
-                                         
-source    资源文件夹                   
-  │  favicon.png    网站标题栏上的图标            
-  │                             
-  ├─css                         
-  │  │  night.styl   夜晚模式样式           
-  │  │  style.styl   主样式           
-  │  │  _variables.styl   styl变量     
-  │  │                          
-  │  ├─fonts   本地字体文件夹                 
-  │  │      fontawesome-webfont.
-  │  │      fontawesome-webfont.
-  │  │      fontawesome-webfont.
-  │  │      fontawesome-webfont.
-  │  │      FontAwesome.otf     
-  │  │                          
-  │  └─_partial                 
-  │          archive.styl   首页样式    
-  │          article.styl   文章页面样式    
-  │          copyright.styl 版权说明样式    
-  │          footer.styl    底部footer样式    
-  │          header.styl    头部导航样式    
-  │          highlight.styl 代码高亮样式    
-  │          iewarn.styl    低版本ie浏览器警告样式    
-  │          money.styl     打赏功能样式    
-  │          share.styl     分享功能样式    
-  │                             
-  ├─img                         
-  │      bottom.png   文章页面分割线图片          
-  │      logo.jpg     网站logo图片           
-  │                             
-  └─js                          
-          iewarn.js    低版本ie浏览器检测脚本         
-          lightmode.js 灯光模式切换脚本         
-          qrcode.js    网站链接二维码生成脚本         
-          script.js    网站主js脚本         
-                                
+ 
+	│  LICENSE
+	│  readme.md
+	│  _config.yml
+	│
+	├─languages
+	│      default.yml
+	│      fr.yml
+	│      nl.yml
+	│      no.yml
+	│      ru.yml
+	│      zh-CN.yml
+	│      zh-TW.yml
+	│
+	                   
+	layout                          
+	 │  archive.ejs                 
+	 │  category.ejs                
+	 │  index.ejs       首页            
+	 │  layout.ejs                  
+	 │  page.ejs                    
+	 │  post.ejs                    
+	 │  tag.ejs                     
+	 │                              
+	 ├─_partial                     
+	 │  │  after-footer.ejs          
+	 │  │  archive-post.ejs         
+	 │  │  archive.ejs              
+	 │  │  article.ejs              
+	 │  │  footer.ejs    footer模板           
+	 │  │  friends.ejs   右侧友情链接模板           
+	 │  │  google-analytics.ejs     谷歌分析模板
+	 │  │  head.ejs      网站头部引用模板           
+	 │  │  header.ejs    网站头部导航栏模板           
+	 │  │  iewarn.esj    低版本ie浏览器警告信息模板           
+	 │  │  share.ejs     文章分享模板           
+	 │  │  social.ejs    右侧社交网路信息模板           
+	 │  │                           
+	 │  └─post                      
+	 │   ---    category.ejs  分类      
+	 │   ---    copyright.ejs 文章版权声明      
+	 │   ---    date.ejs      日期      
+	 │   ---    disqus.ejs    第三方评论disqus      
+	 │   ---    money.ejs     打赏      
+	 │   ---    nav.ejs       导航       
+	 │   ---    tags.ejs      标签      
+	 │   ---    title.ejs     文章题目      
+	 │                              
+	 └─_widget                      
+	     --- archive.ejs            
+	     --- category.ejs           
+	     --- recent_posts.ejs       
+	                                         
+	source    资源文件夹                   
+	  │  favicon.png    网站标题栏上的图标            
+	  │                             
+	  ├─css                         
+	  │  │  night.styl   夜晚模式样式           
+	  │  │  style.styl   主样式           
+	  │  │  _variables.styl   styl变量     
+	  │  │                          
+	  │  ├─fonts   本地字体文件夹                 
+	  │  │      fontawesome-webfont.
+	  │  │      fontawesome-webfont.
+	  │  │      fontawesome-webfont.
+	  │  │      fontawesome-webfont.
+	  │  │      FontAwesome.otf     
+	  │  │                          
+	  │  └─_partial                 
+	  │          archive.styl   首页样式    
+	  │          article.styl   文章页面样式    
+	  │          copyright.styl 版权说明样式    
+	  │          footer.styl    底部footer样式    
+	  │          header.styl    头部导航样式    
+	  │          highlight.styl 代码高亮样式    
+	  │          iewarn.styl    低版本ie浏览器警告样式    
+	  │          money.styl     打赏功能样式    
+	  │          share.styl     分享功能样式    
+	  │                             
+	  ├─img                         
+	  │  ---    bottom.png   文章页面分割线图片          
+	  │  ---    logo.jpg     网站logo图片           
+	  │                             
+	  └─js                          
+	       ---   iewarn.js    低版本ie浏览器检测脚本         
+	       ---   lightmode.js 灯光模式切换脚本         
+	       ---   qrcode.js    网站链接二维码生成脚本         
+	       ---   script.js    网站主js脚本         
+	                                
 
 
 

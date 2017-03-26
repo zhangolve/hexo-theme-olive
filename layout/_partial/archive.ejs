@@ -66,10 +66,14 @@
                 </ul>
             </div>
             <div class="page">
-            <%- paginator('/', [], {
+            <% var prev= __('prev') %>
+            <% var next= __('next') %>
+            <%- paginator({
   perPage: 10,
   format: 'page/%d/',
   layout: ['archive', 'index'],
+  prev_text: prev,
+  next_text: next,
   
 }) %>
         </div>
