@@ -130,7 +130,9 @@ $ git clone https://github.com/zhangolve/hexo-theme-olive.git themes/olive
 
 [史上最详细的Hexo博客搭建图文教程](https://xuanwo.org/2015/03/26/hexo-intor/)
 
+# 一些扯淡的话
 
+[一些扯淡的话](https://github.com/zhangolve/hexo-theme-olive/blob/master/little-talk.md)
 
 # 目录结构
 
