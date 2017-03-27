@@ -1,4 +1,4 @@
-<%if(theme.disqus!==null) { %>
+<%if(theme.disqus!==null&&theme.disqus!==undefined) { %>
 <% var Fullkey= post.path %>
 <% var keyArr=Fullkey.split('/') %>
 <% var key=keyArr[keyArr.length-3]+'/'+keyArr[keyArr.length-2] %>

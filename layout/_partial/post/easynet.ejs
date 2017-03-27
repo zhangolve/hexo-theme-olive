@@ -1,0 +1,20 @@
+<!--注意网易云跟贴url位置必须在网易网站配置中的网站域名之下，比如当我在localhost下设置的时候哦
+就会因为与网易网站设置的域名不匹配而导致跟贴不能显示出来
+-->
+
+<% if(theme.cloudtie!==null&&theme.cloudtie!==undefined) { %>
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+<% var origin=config.url %>
+var pathname=document.location.pathname
+var cloudTieConfig = {
+  url: "<%= origin %>"+pathname, 
+  sourceId: "uuuu",
+  productKey: "d9ac976925074859942b446f585903fd",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+<% } %>
