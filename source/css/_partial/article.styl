@@ -8,7 +8,7 @@ article{
   width:70%
   margin-top:5rem
 
-@media screen and (max-width: 479px)
+@media mq-mobile
   .article
     width:80%  
     blockquote
@@ -108,8 +108,8 @@ article{
   .article-date
     font-size:16px
 
-
-if(selectionEffect)
+//选中文字之后的变化效果
+//
   .article-entry 
     p::-moz-selection  
         background-color:#e0dccc
