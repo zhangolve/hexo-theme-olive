@@ -14,6 +14,10 @@ headerpic: "/img/logo.jpg"
 
 # 导航栏上的顶部logo 请自行替换需要显示的logo图片
 
+# theme-color 配置此选项后，使用安卓Chrome系浏览器浏览本站时，将使状态栏主题颜色发生改变
+
+
+theme_color: true
 
 
 widgets:
