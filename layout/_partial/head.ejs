@@ -20,6 +20,9 @@
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <% if(theme.A2HS) { %>
+  <link rel="manifest" href="/manifest.json">
+  <% } %>
   <% if(theme.theme_color) { %>
   <meta name="theme-color" content="#0c0c1f">
   <% } %>
