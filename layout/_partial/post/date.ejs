@@ -1,17 +1,22 @@
 <!--采用相对的时间或者绝对的时间，默认相对-->
 
 <div class="<%= class_name %>">
-
- 
-
- 
   	<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
   	<% var reTime=post.date.fromNow() %>
   	<% var reTimeArray=reTime.split(' ') %>
   	<% var newI18nArray=[] %>
   	<% for(var i=0;i<reTimeArray.length;i++) {   %>
   	<% if(i==0) { %>
-  	<%  newI18nArray.push(reTimeArray[0])  } %>
+    
+      <% if(reTimeArray[0]!=='a') { %>    
+      <%  newI18nArray.push(reTimeArray[0])  %>
+      <% } %>
+      <%  if(reTimeArray[0]=='a'){ %>
+        <% newI18nArray.push("1") %> 
+      <% } %>  
+    <% } %>
+    
+    
   	<% if(i>0&&i<reTimeArray.length-1) { %>
   	<% newI18nArray.push(__(reTimeArray[i]))  %> 	
   	<% }%>
