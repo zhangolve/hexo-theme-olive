@@ -27,12 +27,14 @@
     <% if(theme.copyright){  %>
     <%- partial('post/copyright') %>
     <% } %>
+    <div class="cat-and-tags">
     <%- partial('post/category') %>
     <%- partial('post/tags') %>
-  
+    </div>
+    <%- partial('post/disqus') %>
+    <%- partial('post/easynet') %>
   </div>
-   <%- partial('post/disqus') %>
-   <%- partial('post/easynet') %>
+ 
  
   <!--上一篇下一篇 -->
   <% if (!index){ %>

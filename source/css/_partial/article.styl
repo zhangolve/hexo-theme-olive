@@ -77,27 +77,42 @@ article{
       background-repeat: no-repeat
       background-position: 50%
     a
-      color: #259;
+      color: #259
+  .cat-and-tags
+    display:-webkit-box
+    display:-ms-flexbox
+    display:flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center     
+  #article-nav
+    display:block
+    font-size: 1.3rem    
   #article-nav-newer
     float:left
   #article-nav-older
     float:right 
   .article-category
-    
-    line-height:2rem
-    background: rgba(0,0,0,.06)
+    line-height: 2rem
+    background: rgba(0,0,0,0.06)
     color: #666768
     border-radius: 15px
+    padding: 4px 10px
     text-align: center
-    font-size:14px
+    font-size: 14px
   .show-tags
-    width:100%
-    background: rgba(0,0,0,.7)
+    line-height: 2rem;
+
     ul
       list-style:none
+      text-align: center
+      transform: translateX(-50%)
+      position: relative
+      left: 50%
+      margin: 0px
     li 
       float:left
-      width:10rem
+      padding: 4px 10px
       line-height:2rem
       background: rgba(0,0,0,.06)
       color: #666768

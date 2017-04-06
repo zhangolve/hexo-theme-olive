@@ -4,9 +4,9 @@
 <% if(tags && tags.length) { %>
 <% tags.each(function(tag) {%>
 <li>
-<% console.log(typeof config.url) %>
+
 <%var tagUrl=  config.url +'/tags/'+tag.name %>
-<% console.log(typeof tagUrl) %>
+
 <a href=<%= tagUrl %> >
 <i class="fa fa-tags" aria-hidden="true"></i>
 <%= tag.name%>
