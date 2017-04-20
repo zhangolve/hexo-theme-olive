@@ -66,7 +66,7 @@
 $ git clone https://github.com/zhangolve/hexo-theme-olive.git themes/olive
 配置
 
-修改hexo根目录下的 _config.yml ： theme: yilia
+修改hexo根目录下的 _config.yml ： theme: olive
 
 
 
@@ -137,6 +137,32 @@ $ git clone https://github.com/zhangolve/hexo-theme-olive.git themes/olive
 # 一些扯淡的话
 
 [一些扯淡的话](https://github.com/zhangolve/hexo-theme-olive/blob/master/little-talk.md)
+
+
+# Q&A
+
+## 1.国际化是如何配置的？为什么你的博客界面是中文的,我使用你这个主题，我的博客界面上还有很多英文或乱码显示?
+
+博客的国际化这一块，是在hexo 博客系统根目录下的_config.yml文件中进行配置的，在我的博客中默认已经有了这个配置，因此之前也并未在此说明，如果你的_config.yml 文件中没有这方面的配置，请自行添加，例如：
+
+
+	language: zh-CN
+
+
+
+则，当前博客页面上的一些控件，例如上下页信息，发布时间等信息都将以简体中文的方式来显示。具体的所有语言类型可以在主题目下的languages文件夹下查看，每一个文件名即为一种语言选项。如果您未在博客系统根目录下的_config.yml 中设置语言选项，则默认将以英文的方式来显示控件信息。
+
+
+## 我第一次接触Hexo博客系统，我也不是学习计算机的，我就想用你的主题尽快配置出来一个美观好用的博客，你有没有文档方便我查看?
+
+我上面也已经说了，主题配置文件在主目录下的_config.yml，请根据自己需要修改使用。这个这个文件里的每一项都有详细的说明，只要按照规则去配置，就能很快地搞出一个美观的博客。
+
+当然，如果你是第一次接触Hexo博客系统，可以一开始配置Hexo 就会很费时，因为我也是这么过来的，也推荐你看看我上面提到的一些文章。
+
+
+
+
+
 
 # 目录结构
 
