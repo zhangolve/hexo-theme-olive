@@ -160,7 +160,46 @@ $ git clone https://github.com/zhangolve/hexo-theme-olive.git themes/olive
 当然，如果你是第一次接触Hexo博客系统，可以一开始配置Hexo 就会很费时，因为我也是这么过来的，也推荐你看看我上面提到的一些文章。
 
 
+## 首页的订阅我，关于我在配置文件里都有设置，为什么点击之后是404?
 
+情况是这样的，我的推荐是你能够支持RSS的订阅和一个「关于我」的界面展示。
+
+RSS订阅要求安装Hexo插件，我也推荐你能够安装sitemap插件，这也有助于你的站点更好地被搜索引擎检索，这方面的内容，推荐你看一下[站点地图](http://blog.csdn.net/u010053344/article/details/50706790)  以及[Hexo教程4](http://www.jianshu.com/p/bb35e703f9bf) 这两篇文章，总结而言，安装起来并不复杂。
+
+而「关于我」的界面，也需要你自己写一个「关于我」的页面，不然当然不可能凭空产生一个这样的页面。
+需要在博客根目录下的source文件夹下建立一个about文件夹，在这里面添加一个index.md文件，在里面输入你自定义的个人介绍内容。
+
+具体也可以看我下面的这个演示
+
+![](http://7ktu2f.com1.z0.glb.clouddn.com/aboutme.gif)
+
+
+## 为什么我的本地图片不能正常显示？
+
+从上图也可以看出来，支付宝的图片位置在博客根目录source文件夹下的img文件夹内，而非theme文件夹下的source文件夹。我给定的模板中，支付宝图片位置与其他图片位置不同，你也可以修改图片位置。
+
+当加上引号之后，是相对于主题目录下source文件夹而言的路径设置
+
+比如：headerpic: "/img/logo.jpg"
+
+则你需要把你的logo.jpg 文件放到   \hexo(博客根目录)\themes\olive\source\img
+
+而如果是 alipay: /img/alipay.jpg
+
+你需要把你的图片放到 \hexo(博客根目录)\source\img 目录之下
+
+
+
+
+## 出现404就算了，为什么页面还这么丑。
+
+如果出现了404，如果你使用的是Github pages，那么404将会显示Github 官方的404页面，我推荐使用腾讯公益404，还是我上图中的示例，你应该已经看到了在source文件夹中，有一个404.md文件，如果你的这个文件夹下没有这个文件，请创建之，在这个404.md 文件内添加这样一段代码：
+
+
+	<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
+
+
+然后为了测试你的这个404页面是否正常，如果是在本地，请访问 localhost:4000/404.html ，如果已经部署完毕，请访问你的网址后缀404.html ，比如我的博客： hktkdy.com/404.html
 
 
 
