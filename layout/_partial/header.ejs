@@ -11,18 +11,28 @@
 首页
 </a>
 </li>
+
+
+<% if(theme.aboutme) { %>
+	
 <li class="nav-list">
-<a href="/about">
+<a href= <%= theme.aboutme[1] %>  >
 <i class="fa fa-youtube-play" aria-hidden="true" ></i>
-关于我
+<%= theme.aboutme[0] %>
 </a>
 </li>
+<% } %>
+
+<% if(theme.headerfeed ){ %>
 <li class="nav-list">
 <a href="/atom.xml" target="_blank" >
 <i class="fa fa-feed" aria-hidden="true" ></i>
-订阅我
+<%= theme.headerfeed %>
 </a>
 </li>
+<% } %>
+
+<% if(theme.lightmode) { %>
 <li class="nav-list lightmode ">
 <a href="javascript:;" >
 <i class="fa fa-moon-o" aria-hidden="true"></i>
@@ -30,5 +40,5 @@
 </a>
 </li>
 </ul>
-
+<% } %>
 </header>

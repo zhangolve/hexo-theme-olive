@@ -14,6 +14,20 @@ headerpic: "/img/logo.jpg"
 
 # 导航栏上的顶部logo 请自行替换需要显示的logo图片
 
+#  顶部导航栏的「个人介绍」界面设置，数组中第一项为显示的文字，第二项为跳转的相对路径  
+
+aboutme : ["关于","/about"]
+
+# 是否在导航栏上显示订阅博客更新功能，如果设置的话，则请填入相应的提示文本，如“订阅我”，否则请置空本项目
+
+headerfeed: "订阅"
+
+# 夜间模式设置，如果想要设置夜间模式，则置为true，否则false或不填置空
+# 推荐设置夜间模式，这也是本主题一个特色
+lightmode: true
+
+
+
 # theme-color 配置此选项后，使用安卓Chrome系浏览器浏览本站时，将使状态栏主题颜色发生改变
 # A2HS  Add to Homescreen  添加到主屏幕 so cool
 A2HS: true
@@ -74,7 +88,7 @@ disqus:
 
 # 如果不需要网易云跟贴，请留空该字段
 
-cloudtie: "d9ac97642b446f585903fd" 
+cloudtie: "d9ac9785903fd" 
 
 
 # 在引号内填入你的谷歌分析id。
