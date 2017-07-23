@@ -83,13 +83,6 @@ email: 'zhangolve@gmail.com'
 
 disqus: 
 
-# 网易云跟贴，填如你正确的productKey 
-# 具体的配置方法 http://tie.163.com/gt/17/0119/16/CB5J9J3U00308CQ5.html#from=relevant#xwwzy_35_bottomnewskwd
-
-# 如果不需要网易云跟贴，请留空该字段
-
-cloudtie: "d9ac9785903fd" 
-
 
 # 在引号内填入你的谷歌分析id。
 google_analytics: ''
